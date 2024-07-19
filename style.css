@@ -1,13 +1,17 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #edf2fc;
+    font-family: 'Poppins', sans-serif;
 }
 
 .hero {
-    height: 100vh;
     width: 100%;
     background: #edf2fc;
-    font-family: sans-serif;
     position: relative;
 }
 
@@ -25,10 +29,13 @@ nav {
     cursor: pointer;
 }
 
-nav ul li {
-    display: inline-block;
+nav ul {
+    display: flex;
     list-style: none;
-    margin: 10px 20px;
+}
+
+nav ul li {
+    margin: 0 20px;
 }
 
 nav ul li a {
@@ -40,20 +47,10 @@ nav ul li a:hover {
     color: #00308F;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
-}
-
-body {
-    background: #f4f4f4;
-    color: #333;
-}
-
 .container {
     width: 100%;
+    max-width: 1200px;
+    margin: auto;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -76,6 +73,12 @@ body {
     overflow: hidden;
     width: 100%;
     max-width: 600px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .project-info {
@@ -110,8 +113,79 @@ body {
     background: #0056b3;
 }
 
-img {
+.project-item img {
     width: 250px;
-    height: auto;
-    object-fit: cover;
+    height: 190px;
+    /* object-fit: cover; */
+}
+
+@media (max-width: 768px) {
+    .project-item {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .project-item img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.img-box {
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+.img-box img {
+    height: 100%;
+    position: absolute;
+    left: 60%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: transform 0.5s ease-out, bottom 0.5s ease-out;
+}
+
+.img-box img.bg {
+    margin: 200px;
+    height: 60%;
+    position: relative;
+    left: 31%;
+    top: -20%;
+    transition: transform 0.5s ease-out, top 0.5s ease-out;
+}
+
+.img-box:hover .bg {
+    transform: translateX(-50%) translateY(-10%);
+    top: -25%;
+}
+
+.img-box img.bg1 {
+    transition: transform 1s ease-out;
+}
+
+.img-box:hover .bg1 {
+    transform: translateX(-150px);
+} 
+.social-link {
+    margin-left: 8%;
+    margin-top: -11px;
+    position: relative;
+    z-index: 3;
+    top: -300px;
+    left: 300px;
+}
+
+.social-link a {
+    font-size: 50px;
+    color: #212121;
+    margin-right: 20px;
+    z-index: 4;
+    top: -80px;
+    position: relative;
+}
+.social-link a:hover{
+    color: #00308F;
 }
