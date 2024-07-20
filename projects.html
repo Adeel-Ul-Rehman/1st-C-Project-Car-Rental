@@ -39,6 +39,7 @@
     <div class="hero">
         <nav>
             <img src="images/Preview.jpeg" class="logo">
+            <h1>MY PROJECTS</h1>
             <ul>
                 <li><a href="">EDUCATION</a></li>
                 <li><a href="">SKILLS</a></li>
@@ -46,6 +47,7 @@
                 <li><a href="">CONTACT</a></li>
                 <li><a href="">ABOUT</a></li>
             </ul>
+            <img src="images/moon.png" id="icons">
         </nav>
     </div>
 
@@ -55,13 +57,8 @@
         <img src="images/Picsart_24-07-15_03-53-56-369-removebg.png" class="bg1">
     </div>
 
-    <div class="social-link">
-        <a href=""><i class="fab fa-linkedin-in"></i></a>
-        <a href=""><i class="fab fa-replyd"></i></a>
-        <a href=""><i class="fab fa-github"></i></a>
-        </div>
-
     <div class="container">
+        <h2 class="lang">HTML, JS and CSS</h2>
         <div class="project-list">
             <div class="project-item" id="weather-api">
                 <div class="project-info">
@@ -125,7 +122,62 @@
             </div>
             <!-- Add other project entries here -->
         </div>
+        <h2 class="lang1">C++ Projects</h2>
+        <div class="project-item" id="Car-rental">
+            <div class="project-info">
+                <h2>Car Rental Management System</h2>
+                <p>It's a C++ project in which after running you will have to login  you can add new cars , rent or return cars</p>
+                <a href="https://replit.com/@AdeelAj/Car-Rental-Management-System#main.cpp" class="try-it-btn">Go to repelit</a>
+            </div>
+            <img src="images/Toyota-price-decreased.jpg" alt="Car rental">
+        </div>
+        <div class="project-item" id="tour-management">
+            <div class="project-info">
+                <h2>Tour Management System</h2>
+                <p>It's also a C++ project in which after running you will have to login as any manager you want, then you can book a tour only in C++ program</p>
+                <a href="https://replit.com/@AdeelAj/Tour-Management-System" class="try-it-btn">Go to repelit</a>
+            </div>
+            <img src="images/images.jpeg" alt="Tour">
+        </div>
+        <h2 class="lang1">Other Projects</h2>
+        <div class="project-item" id="Fire-shoot-game">
+            <div class="project-info">
+                <h2>Scrach shooting Game</h2>
+                <p>You can Download it by clicking below but to run that you have to install scratch software, then you can have a very cool and satisfying experience. </p>
+                <a href="https://drive.google.com/file/d/1oTytYazyh6Cdt0sNDhPtkbvTyrTGmObE/view?usp=drive_link" class="try-it-btn">Download</a>
+            </div>
+            <img src="images/png-clipart-cowboy-cartoon-gunfighter-sprite-western-hat-cowboy-hat-removebg-preview.png" alt="Tour">
+        </div>
+        <div class="project-item" id="Hospital-Management">
+            <div class="project-info">
+                <h2>Hospital Management</h2>
+                <p>Click below and download simple Hospital Management system, in which Basic featchers of hospital management system are add.  </p>
+                <a href="https://drive.google.com/file/d/1N2GIoQaz-UzC3qgX6-evlgdjOgXHjJAV/view?usp=drive_link" class="try-it-btn">Download</a>
+            </div>
+            <img src="images/hospital-building-for-healthcare-background-illustration-with-ambulance-car-doctor-patient-nurses-and-medical-clinic-exterior-free-vector.jpg" alt="Tour">
+        </div>
     </div>
-    <script src="script.js"></script>
+
+    <div class="social-link">
+        <a href=""><i class="fab fa-linkedin-in"></i></a>
+        <a href=""><i class="fab fa-replyd"></i></a>
+        <a href=""><i class="fab fa-github"></i></a>
+        </div>
+
+    <script>
+
+var icons = document.getElementById("icons");
+
+icons.onclick = function (){
+    document.body.classList.toggle("dark-mode");
+    if(document.body.classList.contains("dark-mode")){
+        icons.src = "images/sun.png";
+    }
+    else{
+        icons.src = "images/moon.png";
+    }
+}
+
+    </script>
 </body>
 </html>
